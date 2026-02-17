@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ots-trade.ru/sitemap.xml
