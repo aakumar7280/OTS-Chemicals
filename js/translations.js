@@ -225,6 +225,7 @@ const translations = {
   // ===== FORM MESSAGES =====
   "form.error.fields":  { ru: "Пожалуйста, заполните все поля.",                en: "Please fill in all fields." },
   "form.error.email":   { ru: "Пожалуйста, введите корректный email.",          en: "Please enter a valid email address." },
+  "form.error.send":    { ru: "Произошла ошибка при отправке. Попробуйте позже.", en: "Something went wrong. Please try again later." },
   "form.success":       { ru: "Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.", en: "Thank you! Your message has been sent. We'll get back to you soon." },
   "form.sending":       { ru: "Отправка...",    en: "Sending..." },
 

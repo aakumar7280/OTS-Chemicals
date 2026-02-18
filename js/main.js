@@ -219,7 +219,7 @@
         return;
       }
 
-      // Simulate submission (replace with real endpoint in production)
+      // Submit to Formsubmit.co via AJAX
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
       submitBtn.innerHTML = `
@@ -229,15 +229,29 @@
         ${getTranslation('form.sending')}
       `;
 
-      setTimeout(() => {
-        showFormStatus(getTranslation('form.success'), 'success');
-        contactForm.reset();
+      const formData = new FormData(contactForm);
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          showFormStatus(getTranslation('form.success'), 'success');
+          contactForm.reset();
+        } else {
+          showFormStatus(getTranslation('form.error.send'), 'error');
+        }
         submitBtn.disabled = false;
-        submitBtn.innerHTML = `
-          ${getTranslation('form.submit')}
-          <svg class="btn__icon" viewBox="0 0 20 20" fill="none"><path d="M2 10l7-7m0 0v5m0-5H4m14 12l-7 7m0 0v-5m0 5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        `;
-      }, 1500);
+        submitBtn.textContent = getTranslation('form.submit');
+      })
+      .catch(() => {
+        showFormStatus(getTranslation('form.error.send'), 'error');
+        submitBtn.disabled = false;
+        submitBtn.textContent = getTranslation('form.submit');
+      });
     });
   }
 

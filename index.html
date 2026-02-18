@@ -450,7 +450,11 @@
           </div>
         </div>
 
-        <form class="contact__form" id="contactForm" data-animate="fade-up" data-delay="200" novalidate>
+        <form class="contact__form" id="contactForm" action="https://formsubmit.co/ajax/info@ots-trade.ru" method="POST" data-animate="fade-up" data-delay="200" novalidate>
+          <!-- Formsubmit.co configuration -->
+          <input type="hidden" name="_subject" value="New inquiry from OTS website">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
           <div class="contact__form-group">
             <label for="name" data-i18n="form.name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" data-i18n-placeholder="form.name.placeholder" required autocomplete="name" />
@@ -475,7 +479,6 @@
           </div>
           <button type="submit" class="btn btn--primary btn--full" data-i18n="form.submit">
             Send Message
-            <svg class="btn__icon" viewBox="0 0 20 20" fill="none"><path d="M2 10l7-7m0 0v5m0-5H4m14 12l-7 7m0 0v-5m0 5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="contact__form-status" id="formStatus" aria-live="polite"></div>
         </form>
