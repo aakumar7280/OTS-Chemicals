@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,13 +44,22 @@
 
       <nav class="header__nav" id="nav" aria-label="Main navigation">
         <ul class="header__nav-list">
-          <li><a href="#about" class="header__nav-link">About</a></li>
-          <li><a href="#services" class="header__nav-link">Services</a></li>
-          <li><a href="#leadership" class="header__nav-link">Leadership</a></li>
-          <li><a href="#projects" class="header__nav-link">Projects</a></li>
-          <li><a href="#contact" class="header__nav-link header__nav-link--cta">Contact Us</a></li>
+          <li><a href="#about" class="header__nav-link" data-i18n="nav.about">About</a></li>
+          <li><a href="#services" class="header__nav-link" data-i18n="nav.services">Services</a></li>
+          <li><a href="#leadership" class="header__nav-link" data-i18n="nav.leadership">Leadership</a></li>
+          <li><a href="#projects" class="header__nav-link" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#contact" class="header__nav-link header__nav-link--cta" data-i18n="nav.contact">Contact Us</a></li>
         </ul>
       </nav>
+
+      <div class="lang-toggle" id="langToggle">
+        <button type="button" class="lang-toggle__btn lang-toggle__btn--active" data-lang="ru" aria-label="Русский">
+          <svg viewBox="0 0 36 24" class="lang-toggle__flag"><rect width="36" height="8" fill="#fff"/><rect y="8" width="36" height="8" fill="#0039A6"/><rect y="16" width="36" height="8" fill="#D52B1E"/></svg>
+        </button>
+        <button type="button" class="lang-toggle__btn" data-lang="en" aria-label="English">
+          <svg viewBox="0 0 60 30" class="lang-toggle__flag"><rect width="60" height="30" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30" stroke="#C8102E" stroke-width="2"/><path d="M60 0L0 30" stroke="#C8102E" stroke-width="2"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></svg>
+        </button>
+      </div>
 
       <button class="header__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -65,19 +74,18 @@
     </div>
     <div class="container hero__inner">
       <h1 class="hero__title" data-animate="fade-up">
-        Expert Partner in<br />
-        <span class="hero__title--accent">Epoxy Resin Systems</span>
+        <span data-i18n="hero.title.1">Expert Partner in</span><br />
+        <span class="hero__title--accent" data-i18n="hero.title.2">Epoxy Resin Systems</span>
       </h1>
-      <p class="hero__subtitle" data-animate="fade-up" data-delay="100">
-        From R&amp;D to production — we engineer proprietary epoxy resin systems
-        tailored for civil construction, industrial, aerospace, and consumer applications.
+      <p class="hero__subtitle" data-animate="fade-up" data-delay="100" data-i18n="hero.subtitle">
+        From R&amp;D to production — we engineer proprietary epoxy resin systems tailored for civil construction, industrial, aerospace, and consumer applications.
       </p>
       <div class="hero__actions" data-animate="fade-up" data-delay="200">
-        <a href="#projects" class="btn btn--primary">
+        <a href="#projects" class="btn btn--primary" data-i18n="hero.btn.projects">
           Explore Projects
           <svg class="btn__icon" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#contact" class="btn btn--outline">Get in Touch</a>
+        <a href="#contact" class="btn btn--outline" data-i18n="hero.btn.contact">Get in Touch</a>
       </div>
     </div>
     <a href="#about" class="hero__scroll" aria-label="Scroll to content">
@@ -89,11 +97,10 @@
   <section id="about" class="about section">
     <div class="container">
       <div class="section__header" data-animate="fade-up">
-        <span class="section__tag">Who We Are</span>
-        <h2 class="section__title">Engineering the Future of <span class="text-accent">Composite Materials</span></h2>
-        <p class="section__desc">
-          OTS is a specialized company focused on R&amp;D and production of proprietary epoxy resin systems.
-          We serve as an expert partner — from designing and stress calculation to selecting the ideal materials for your application.
+        <span class="section__tag" data-i18n="about.tag">Who We Are</span>
+        <h2 class="section__title"><span data-i18n="about.title.1">Engineering the Future of </span><span class="text-accent" data-i18n="about.title.2">Composite Materials</span></h2>
+        <p class="section__desc" data-i18n="about.desc">
+          OTS is a specialized company focused on R&amp;D and production of proprietary epoxy resin systems. We serve as an expert partner — from designing and stress calculation to selecting the ideal materials for your application.
         </p>
       </div>
 
@@ -102,22 +109,22 @@
           <div class="about__card-icon">
             <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/><path d="M24 14v10l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
-          <h3>Our Mission</h3>
-          <p>To serve as an expert partner in epoxy resin systems — delivering cutting-edge solutions through dedicated research, precision manufacturing, and deep material science expertise.</p>
+          <h3 data-i18n="about.mission.title">Our Mission</h3>
+          <p data-i18n="about.mission.text">To serve as an expert partner in epoxy resin systems — delivering cutting-edge solutions through dedicated research, precision manufacturing, and deep material science expertise.</p>
         </div>
         <div class="about__card" data-animate="fade-up" data-delay="200">
           <div class="about__card-icon">
             <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M16 28l6-8 4 4 6-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <h3>Core Business</h3>
-          <p>R&amp;D and production of proprietary epoxy resin systems tailored for civil construction, industrial applications, aerospace composites, and consumer goods.</p>
+          <h3 data-i18n="about.core.title">Core Business</h3>
+          <p data-i18n="about.core.text">R&amp;D and production of proprietary epoxy resin systems tailored for civil construction, industrial applications, aerospace composites, and consumer goods.</p>
         </div>
         <div class="about__card" data-animate="fade-up" data-delay="300">
           <div class="about__card-icon">
             <svg viewBox="0 0 48 48" fill="none"><path d="M24 4l18 10v20L24 44 6 34V14L24 4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M24 24V4M24 24l18 10M24 24L6 34" stroke="currentColor" stroke-width="2"/></svg>
           </div>
-          <h3>Consulting</h3>
-          <p>Specialized consulting in design, stress calculation, and material selection — helping clients choose the right epoxy system for optimal performance.</p>
+          <h3 data-i18n="about.consulting.title">Consulting</h3>
+          <p data-i18n="about.consulting.text">Specialized consulting in design, stress calculation, and material selection — helping clients choose the right epoxy system for optimal performance.</p>
         </div>
       </div>
 
@@ -125,15 +132,15 @@
         <div class="about__location">
           <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
           <div>
-            <strong>Head Office</strong>
-            <span>Moscow, Russia</span>
+            <strong data-i18n="about.loc.office">Head Office</strong>
+            <span data-i18n="about.loc.office.city">Moscow, Russia</span>
           </div>
         </div>
         <div class="about__location">
           <svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 21v-6h6v6M9 9h.01M15 9h.01M9 13h.01M15 13h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           <div>
-            <strong>Lab &amp; Production</strong>
-            <span>Ramenskoe, Russia</span>
+            <strong data-i18n="about.loc.lab">Lab &amp; Production</strong>
+            <span data-i18n="about.loc.lab.city">Ramenskoe, Russia</span>
           </div>
         </div>
       </div>
@@ -144,9 +151,9 @@
   <section id="services" class="services section section--dark">
     <div class="container">
       <div class="section__header" data-animate="fade-up">
-        <span class="section__tag">What We Do</span>
-        <h2 class="section__title">Comprehensive <span class="text-accent">Epoxy Solutions</span></h2>
-        <p class="section__desc">
+        <span class="section__tag" data-i18n="services.tag">What We Do</span>
+        <h2 class="section__title"><span data-i18n="services.title.1">Comprehensive </span><span class="text-accent" data-i18n="services.title.2">Epoxy Solutions</span></h2>
+        <p class="section__desc" data-i18n="services.desc">
           From initial concept through production, OTS offers a full spectrum of services in epoxy resin technology and composite material engineering.
         </p>
       </div>
@@ -154,33 +161,33 @@
       <div class="services__grid">
         <div class="services__card" data-animate="fade-up" data-delay="100">
           <div class="services__card-number">01</div>
-          <h3>Research &amp; Development</h3>
-          <p>Proprietary formulations developed through rigorous scientific research, backed by 50+ patents and decades of expertise in polymer chemistry.</p>
+          <h3 data-i18n="services.1.title">Research &amp; Development</h3>
+          <p data-i18n="services.1.text">Proprietary formulations developed through rigorous scientific research, backed by 50+ patents and decades of expertise in polymer chemistry.</p>
         </div>
         <div class="services__card" data-animate="fade-up" data-delay="150">
           <div class="services__card-number">02</div>
-          <h3>Custom Manufacturing</h3>
-          <p>Production of epoxy resin systems tailored to exact specifications — optimized for specific mechanical, thermal, and chemical requirements.</p>
+          <h3 data-i18n="services.2.title">Custom Manufacturing</h3>
+          <p data-i18n="services.2.text">Production of epoxy resin systems tailored to exact specifications — optimized for specific mechanical, thermal, and chemical requirements.</p>
         </div>
         <div class="services__card" data-animate="fade-up" data-delay="200">
           <div class="services__card-number">03</div>
-          <h3>Design Engineering</h3>
-          <p>Comprehensive design services including stress analysis, structural calculations, and component optimization for composite applications.</p>
+          <h3 data-i18n="services.3.title">Design Engineering</h3>
+          <p data-i18n="services.3.text">Comprehensive design services including stress analysis, structural calculations, and component optimization for composite applications.</p>
         </div>
         <div class="services__card" data-animate="fade-up" data-delay="250">
           <div class="services__card-number">04</div>
-          <h3>Material Consulting</h3>
-          <p>Expert guidance on material selection, ensuring clients choose the optimal epoxy resin system for their specific use case and environment.</p>
+          <h3 data-i18n="services.4.title">Material Consulting</h3>
+          <p data-i18n="services.4.text">Expert guidance on material selection, ensuring clients choose the optimal epoxy resin system for their specific use case and environment.</p>
         </div>
         <div class="services__card" data-animate="fade-up" data-delay="300">
           <div class="services__card-number">05</div>
-          <h3>Prototyping &amp; Testing</h3>
-          <p>In-house laboratory facilities for rapid prototyping, material testing, and performance validation under real-world conditions.</p>
+          <h3 data-i18n="services.5.title">Prototyping &amp; Testing</h3>
+          <p data-i18n="services.5.text">In-house laboratory facilities for rapid prototyping, material testing, and performance validation under real-world conditions.</p>
         </div>
         <div class="services__card" data-animate="fade-up" data-delay="350">
           <div class="services__card-number">06</div>
-          <h3>Technical Support</h3>
-          <p>Ongoing technical assistance throughout the product lifecycle — from initial application to field performance monitoring and optimization.</p>
+          <h3 data-i18n="services.6.title">Technical Support</h3>
+          <p data-i18n="services.6.text">Ongoing technical assistance throughout the product lifecycle — from initial application to field performance monitoring and optimization.</p>
         </div>
       </div>
     </div>
@@ -190,9 +197,9 @@
   <section id="leadership" class="leadership section">
     <div class="container">
       <div class="section__header" data-animate="fade-up">
-        <span class="section__tag">Our Team</span>
-        <h2 class="section__title">Led by <span class="text-accent">Industry Experts</span></h2>
-        <p class="section__desc">
+        <span class="section__tag" data-i18n="leadership.tag">Our Team</span>
+        <h2 class="section__title"><span data-i18n="leadership.title.1">Led by </span><span class="text-accent" data-i18n="leadership.title.2">Industry Experts</span></h2>
+        <p class="section__desc" data-i18n="leadership.desc">
           Our leadership team combines decades of experience in finance, composite technology, and polymer chemistry to drive innovation.
         </p>
       </div>
@@ -205,19 +212,19 @@
           </div>
           <div class="leadership__info">
             <h3>Alexander Shleynikov</h3>
-            <span class="leadership__role">Founder, CEO / CFO</span>
+            <span class="leadership__role" data-i18n="leader.as.role">Founder, CEO / CFO</span>
             <ul class="leadership__highlights">
               <li>
                 <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                25 years of finance experience
+                <span data-i18n="leader.as.1">25 years of finance experience</span>
               </li>
               <li>
                 <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                Banking &amp; securities expertise
+                <span data-i18n="leader.as.2">Banking &amp; securities expertise</span>
               </li>
               <li>
                 <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                7 years in composite industry
+                <span data-i18n="leader.as.3">7 years in composite industry</span>
               </li>
             </ul>
           </div>
@@ -230,19 +237,19 @@
           </div>
           <div class="leadership__info">
             <h3>Larisa Chursova</h3>
-            <span class="leadership__role">Chief of R&amp;D</span>
+            <span class="leadership__role" data-i18n="leader.lc.role">Chief of R&amp;D</span>
             <ul class="leadership__highlights">
               <li>
                 <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                PhD in Composites (Chemistry)
+                <span data-i18n="leader.lc.1">PhD in Composites (Chemistry)</span>
               </li>
               <li>
                 <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                30 years in aerospace composites
+                <span data-i18n="leader.lc.2">30 years in aerospace composites</span>
               </li>
               <li>
                 <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                50+ patents &amp; technical know-how
+                <span data-i18n="leader.lc.3">50+ patents &amp; technical know-how</span>
               </li>
             </ul>
           </div>
@@ -255,10 +262,10 @@
   <section id="projects" class="projects section section--dark">
     <div class="container">
       <div class="section__header" data-animate="fade-up">
-        <span class="section__tag">Our Work</span>
-        <h2 class="section__title">Industry <span class="text-accent">Applications</span></h2>
-        <p class="section__desc">
-          OTS develops solutions across multiple sectors — from reinforcing buildings to engineering high-performance sporting goods.
+        <span class="section__tag" data-i18n="projects.tag">Our Projects</span>
+        <h2 class="section__title"><span data-i18n="projects.title.1">Industry </span><span class="text-accent" data-i18n="projects.title.2">Solutions</span></h2>
+        <p class="section__desc" data-i18n="projects.desc">
+          OTS develops solutions across multiple industries — from structural reinforcement to high-performance sporting equipment.
         </p>
       </div>
 
@@ -266,19 +273,19 @@
       <div class="projects__tabs" data-animate="fade-up" data-delay="100">
         <button class="projects__tab projects__tab--active" data-tab="construction">
           <svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Civil Construction
+          <span data-i18n="projects.tab.construction">Civil Construction</span>
         </button>
         <button class="projects__tab" data-tab="industrial">
           <svg viewBox="0 0 24 24" fill="none"><path d="M2 20h20M4 20V10l4-6h8l4 6v10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="14" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
-          Industrial
+          <span data-i18n="projects.tab.industrial">Industrial</span>
         </button>
         <button class="projects__tab" data-tab="sporting">
           <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10M12 2a15.3 15.3 0 0 0-4 10 15.3 15.3 0 0 0 4 10M2 12h20" stroke="currentColor" stroke-width="1.5"/></svg>
-          Sporting &amp; Consumer
+          <span data-i18n="projects.tab.sporting">Sporting & Consumer</span>
         </button>
         <button class="projects__tab" data-tab="rnd">
           <svg viewBox="0 0 24 24" fill="none"><path d="M9 3v2m6-2v2M9 5a7 7 0 0 0 0 14h6a7 7 0 0 0 0-14M9 5h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M12 9v4l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Ongoing R&amp;D
+          <span data-i18n="projects.tab.rnd">Current R&D</span>
         </button>
       </div>
 
@@ -288,26 +295,26 @@
         <div class="projects__panel projects__panel--active" id="panel-construction" data-animate="fade-up">
           <div class="projects__panel-content">
             <div class="projects__panel-text">
-              <h3>Civil Construction Solutions</h3>
-              <p>We produce advanced epoxy resin systems specifically engineered for the construction industry, addressing critical infrastructure needs.</p>
+              <h3 data-i18n="projects.construction.title">Civil Construction Solutions</h3>
+              <p data-i18n="projects.construction.text">We produce advanced epoxy systems specifically engineered for the construction industry and critical infrastructure.</p>
               <ul class="projects__feature-list">
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>Exterior reinforcement systems for buildings and structures</span>
+                  <span data-i18n="projects.construction.f1">External structural reinforcement systems for buildings</span>
                 </li>
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>High-performance waterproofing solutions</span>
+                  <span data-i18n="projects.construction.f2">High-performance waterproofing solutions</span>
                 </li>
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>Durable, weather-resistant formulations</span>
+                  <span data-i18n="projects.construction.f3">Durable, weather-resistant formulations</span>
                 </li>
               </ul>
             </div>
@@ -316,13 +323,13 @@
                 <div class="projects__visual-icon">
                   <svg viewBox="0 0 64 64" fill="none"><rect x="12" y="20" width="40" height="36" rx="2" stroke="currentColor" stroke-width="2"/><path d="M20 20V12a12 12 0 0 1 24 0v8" stroke="currentColor" stroke-width="2"/><path d="M12 32h40M24 32v24M40 32v24" stroke="currentColor" stroke-width="1.5" opacity=".4"/></svg>
                 </div>
-                <span>Building Reinforcement</span>
+                <span data-i18n="projects.construction.v1">Building Reinforcement</span>
               </div>
               <div class="projects__visual-card">
                 <div class="projects__visual-icon">
                   <svg viewBox="0 0 64 64" fill="none"><path d="M8 52h48M16 52V24l16-12 16 12v28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 52V40h8v12" stroke="currentColor" stroke-width="2"/></svg>
                 </div>
-                <span>Waterproofing</span>
+                <span data-i18n="projects.construction.v2">Waterproofing</span>
               </div>
             </div>
           </div>
@@ -332,26 +339,26 @@
         <div class="projects__panel" id="panel-industrial">
           <div class="projects__panel-content">
             <div class="projects__panel-text">
-              <h3>Industrial Applications</h3>
-              <p>Design and development of epoxy-based composite materials for high-precision industrial equipment and automated systems.</p>
+              <h3 data-i18n="projects.industrial.title">Industrial Applications</h3>
+              <p data-i18n="projects.industrial.text">Design and development of epoxy-based composite materials for precision industrial equipment and automated systems.</p>
               <ul class="projects__feature-list">
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>MADM container composite materials</span>
+                  <span data-i18n="projects.industrial.f1">Composite materials for MADM containers</span>
                 </li>
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>Cash acceptor components</span>
+                  <span data-i18n="projects.industrial.f2">Components for bill acceptors</span>
                 </li>
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>Dock station specialized elements</span>
+                  <span data-i18n="projects.industrial.f3">Specialized docking station elements</span>
                 </li>
               </ul>
             </div>
@@ -360,13 +367,13 @@
                 <div class="projects__visual-icon">
                   <svg viewBox="0 0 64 64" fill="none"><rect x="14" y="10" width="36" height="44" rx="4" stroke="currentColor" stroke-width="2"/><rect x="22" y="18" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="22" y="38" width="20" height="8" rx="2" stroke="currentColor" stroke-width="1.5"/></svg>
                 </div>
-                <span>MADM Containers</span>
+                <span data-i18n="projects.industrial.v1">MADM Containers</span>
               </div>
               <div class="projects__visual-card">
                 <div class="projects__visual-icon">
                   <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2"/><path d="M32 16v8M32 40v8M16 32h8M40 32h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="2"/></svg>
                 </div>
-                <span>Precision Components</span>
+                <span data-i18n="projects.industrial.v2">Precision Components</span>
               </div>
             </div>
           </div>
@@ -376,26 +383,26 @@
         <div class="projects__panel" id="panel-sporting">
           <div class="projects__panel-content">
             <div class="projects__panel-text">
-              <h3>Sporting &amp; Consumer Goods</h3>
-              <p>High-performance epoxy resin systems engineered for sporting equipment and designer consumer products demanding superior strength-to-weight ratios.</p>
+              <h3 data-i18n="projects.sporting.title">Sporting & Consumer Goods</h3>
+              <p data-i18n="projects.sporting.text">High-performance epoxy systems for sporting equipment and designer consumer goods with superior strength-to-weight ratio.</p>
               <ul class="projects__feature-list">
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>Ice hockey sticks &amp; fishing rods</span>
+                  <span data-i18n="projects.sporting.f1">Hockey sticks & fishing rods</span>
                 </li>
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>Ice axes &amp; designer knives</span>
+                  <span data-i18n="projects.sporting.f2">Ice axes & designer knives</span>
                 </li>
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>Infusion systems for designer snowboards</span>
+                  <span data-i18n="projects.sporting.f3">Infusion systems for designer snowboards</span>
                 </li>
               </ul>
             </div>
@@ -404,13 +411,13 @@
                 <div class="projects__visual-icon">
                   <svg viewBox="0 0 64 64" fill="none"><path d="M20 8l-4 48h4l8-24 8 24h4L36 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                <span>Sport Equipment</span>
+                <span data-i18n="projects.sporting.v1">Sporting Equipment</span>
               </div>
               <div class="projects__visual-card">
                 <div class="projects__visual-icon">
                   <svg viewBox="0 0 64 64" fill="none"><path d="M10 48c8-16 12-32 22-36s14 4 22 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 52h28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                 </div>
-                <span>Designer Snowboards</span>
+                <span data-i18n="projects.sporting.v2">Designer Snowboards</span>
               </div>
             </div>
           </div>
@@ -420,26 +427,26 @@
         <div class="projects__panel" id="panel-rnd">
           <div class="projects__panel-content">
             <div class="projects__panel-text">
-              <h3>Ongoing R&amp;D Projects</h3>
-              <p>Our research division continuously pushes boundaries, developing next-generation composite materials for emerging markets and applications.</p>
+              <h3 data-i18n="projects.rnd.title">Current R&D</h3>
+              <p data-i18n="projects.rnd.text">Our research division continuously pushes boundaries, developing next-generation composite materials for emerging markets and applications.</p>
               <ul class="projects__feature-list">
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>Automotive composite materials development</span>
+                  <span data-i18n="projects.rnd.f1">Automotive composite materials development</span>
                 </li>
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>Next-generation consumer goods composites</span>
+                  <span data-i18n="projects.rnd.f2">Next-gen composites for consumer goods</span>
                 </li>
                 <li>
                   <span class="projects__feature-icon">
                     <svg viewBox="0 0 20 20" fill="none"><path d="M16.7 5.3l-8.4 8.4L4.3 9.7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </span>
-                  <span>Advanced polymer chemistry research</span>
+                  <span data-i18n="projects.rnd.f3">Advanced polymer chemistry research</span>
                 </li>
               </ul>
             </div>
@@ -448,13 +455,13 @@
                 <div class="projects__visual-icon">
                   <svg viewBox="0 0 64 64" fill="none"><path d="M22 8v20l-10 20a4 4 0 0 0 3.6 5.6h32.8A4 4 0 0 0 52 48L42 28V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 8h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="40" r="2" fill="currentColor" opacity=".6"/><circle cx="36" cy="36" r="3" fill="currentColor" opacity=".4"/><circle cx="32" cy="44" r="2" fill="currentColor" opacity=".5"/></svg>
                 </div>
-                <span>Automotive R&amp;D</span>
+                <span data-i18n="projects.rnd.v1">Automotive R&D</span>
               </div>
               <div class="projects__visual-card">
                 <div class="projects__visual-icon">
                   <svg viewBox="0 0 64 64" fill="none"><rect x="8" y="16" width="48" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M24 28l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
-                <span>Innovation Pipeline</span>
+                <span data-i18n="projects.rnd.v2">Innovation Pipeline</span>
               </div>
             </div>
           </div>
@@ -467,11 +474,10 @@
   <section id="contact" class="contact section">
     <div class="container">
       <div class="section__header" data-animate="fade-up">
-        <span class="section__tag">Get in Touch</span>
-        <h2 class="section__title">Let's Discuss Your <span class="text-accent">Project</span></h2>
-        <p class="section__desc">
-          Ready to explore how our epoxy resin systems can enhance your application?
-          Reach out to our team for expert consultation.
+        <span class="section__tag" data-i18n="contact.tag">Get in Touch</span>
+        <h2 class="section__title"><span data-i18n="contact.title.1">Let's Discuss Your </span><span class="text-accent" data-i18n="contact.title.2">Project</span></h2>
+        <p class="section__desc" data-i18n="contact.desc">
+          Ready to learn how our epoxy systems can enhance your application? Reach out to our team for expert consultation.
         </p>
       </div>
 
@@ -482,7 +488,7 @@
               <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
-              <strong>Phone</strong>
+              <strong data-i18n="contact.phone">Phone</strong>
               <a href="tel:+79037682653">+7 (903) 768 2653</a>
             </div>
           </div>
@@ -492,7 +498,7 @@
               <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <div>
-              <strong>Email</strong>
+              <strong data-i18n="contact.email.label">Email</strong>
               <a href="mailto:info@ots-trade.ru">info@ots-trade.ru</a>
             </div>
           </div>
@@ -502,37 +508,37 @@
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
             </div>
             <div>
-              <strong>Address</strong>
-              <span><em>Legal Address:</em> —</span>
-              <span><em>Correspondence Address:</em> —</span>
+              <strong data-i18n="contact.address">Address</strong>
+              <span><em data-i18n="contact.address.legal">Legal Address:</em> —</span>
+              <span><em data-i18n="contact.address.corr">Correspondence Address:</em> —</span>
             </div>
           </div>
         </div>
 
         <form class="contact__form" id="contactForm" data-animate="fade-up" data-delay="200" novalidate>
           <div class="contact__form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name" />
+            <label for="name" data-i18n="form.name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" data-i18n-placeholder="form.name.placeholder" required autocomplete="name" />
           </div>
           <div class="contact__form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" />
+            <label for="email" data-i18n="form.email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" data-i18n-placeholder="form.email.placeholder" required autocomplete="email" />
           </div>
           <div class="contact__form-group">
-            <label for="subject">Subject</label>
+            <label for="subject" data-i18n="form.subject">Subject</label>
             <select id="subject" name="subject" required>
-              <option value="" disabled selected>Select a topic</option>
-              <option value="consulting">Material Consulting</option>
-              <option value="project">Project Inquiry</option>
-              <option value="partnership">Partnership</option>
-              <option value="general">General Inquiry</option>
+              <option value="" disabled selected data-i18n="form.subject.default">Select a subject</option>
+              <option value="consulting" data-i18n="form.subject.consulting">Material Consulting</option>
+              <option value="project" data-i18n="form.subject.project">Project Inquiry</option>
+              <option value="partnership" data-i18n="form.subject.partnership">Partnership</option>
+              <option value="general" data-i18n="form.subject.general">General Inquiry</option>
             </select>
           </div>
           <div class="contact__form-group contact__form-group--full">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+            <label for="message" data-i18n="form.message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." data-i18n-placeholder="form.message.placeholder" required></textarea>
           </div>
-          <button type="submit" class="btn btn--primary btn--full">
+          <button type="submit" class="btn btn--primary btn--full" data-i18n="form.submit">
             Send Message
             <svg class="btn__icon" viewBox="0 0 20 20" fill="none"><path d="M2 10l7-7m0 0v5m0-5H4m14 12l-7 7m0 0v-5m0 5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
@@ -547,41 +553,41 @@
     <div class="container">
       <div class="footer__top">
         <div class="footer__brand">
-          <p>Expert partner in epoxy resin systems — R&amp;D, production, and specialized consulting for composite material solutions.</p>
+          <p data-i18n="footer.desc">Expert partner in epoxy resin systems — R&D, production, and specialized consulting for composite materials.</p>
         </div>
         <div class="footer__links">
           <div class="footer__col">
-            <h4>Company</h4>
+            <h4 data-i18n="footer.company">Company</h4>
             <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#leadership">Leadership</a></li>
-              <li><a href="#projects">Projects</a></li>
+              <li><a href="#about" data-i18n="footer.about">About</a></li>
+              <li><a href="#services" data-i18n="footer.services">Services</a></li>
+              <li><a href="#leadership" data-i18n="footer.leadership">Leadership</a></li>
+              <li><a href="#projects" data-i18n="footer.projects">Projects</a></li>
             </ul>
           </div>
           <div class="footer__col">
-            <h4>Solutions</h4>
+            <h4 data-i18n="footer.solutions">Solutions</h4>
             <ul>
-              <li><a href="#projects">Civil Construction</a></li>
-              <li><a href="#projects">Industrial</a></li>
-              <li><a href="#projects">Sporting Goods</a></li>
-              <li><a href="#projects">R&amp;D</a></li>
+              <li><a href="#projects" data-i18n="footer.sol.construction">Civil Construction</a></li>
+              <li><a href="#projects" data-i18n="footer.sol.industrial">Industrial</a></li>
+              <li><a href="#projects" data-i18n="footer.sol.sporting">Sporting Goods</a></li>
+              <li><a href="#projects" data-i18n="footer.sol.rnd">R&D</a></li>
             </ul>
           </div>
           <div class="footer__col">
-            <h4>Contact</h4>
+            <h4 data-i18n="footer.contact">Contact</h4>
             <ul>
               <li><a href="tel:+79037682653">+7 (903) 768 2653</a></li>
               <li><a href="mailto:info@ots-trade.ru">info@ots-trade.ru</a></li>
-              <li><span>Moscow, Russia</span></li>
-              <li><span>Ramenskoe, Russia</span></li>
+              <li><span data-i18n="footer.moscow">Moscow, Russia</span></li>
+              <li><span data-i18n="footer.ramenskoe">Ramenskoe, Russia</span></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; <span id="year"></span> OTS. All rights reserved.</p>
-        <p>Designed with precision. Engineered for performance.</p>
+        <p>&copy; <span id="year"></span> OTS. <span data-i18n="footer.rights">All rights reserved.</span></p>
+        <p data-i18n="footer.tagline">Engineered with precision. Built for performance.</p>
       </div>
     </div>
   </footer>
@@ -591,7 +597,87 @@
     <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5m0 0l-6 6m6-6l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 
-  <!-- JavaScript -->
+  <script src="js/translations.js"></script>
+  <script>
+  /* ===== LANGUAGE SWITCHER (standalone — isolated from main.js) ===== */
+  (function initLangSwitcher() {
+    function setLanguage(lang) {
+      // Text content
+      var elems = document.querySelectorAll('[data-i18n]');
+      for (var i = 0; i < elems.length; i++) {
+        var el = elems[i];
+        var key = el.getAttribute('data-i18n');
+        if (translations[key] && translations[key][lang]) {
+          if (el.tagName === 'OPTION') {
+            el.textContent = translations[key][lang];
+          } else {
+            // Check for SVG btn icon inside (like "Explore Projects" button)
+            var svg = el.querySelector('svg.btn__icon');
+            if (svg) {
+              el.textContent = translations[key][lang] + ' ';
+              el.appendChild(svg);
+            } else {
+              el.textContent = translations[key][lang];
+            }
+          }
+        }
+      }
+
+      // Placeholders
+      var placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+      for (var j = 0; j < placeholders.length; j++) {
+        var ph = placeholders[j];
+        var pKey = ph.getAttribute('data-i18n-placeholder');
+        if (translations[pKey] && translations[pKey][lang]) {
+          ph.placeholder = translations[pKey][lang];
+        }
+      }
+
+      // HTML lang attribute
+      document.documentElement.lang = lang;
+
+      // Toggle active class on flag buttons
+      var btns = document.querySelectorAll('.lang-toggle__btn');
+      for (var k = 0; k < btns.length; k++) {
+        if (btns[k].getAttribute('data-lang') === lang) {
+          btns[k].classList.add('lang-toggle__btn--active');
+        } else {
+          btns[k].classList.remove('lang-toggle__btn--active');
+        }
+      }
+
+      // Persist
+      try { localStorage.setItem('ots-lang', lang); } catch(e) {}
+    }
+
+    // Bind click handlers to flag buttons
+    var flagBtns = document.querySelectorAll('.lang-toggle__btn');
+    for (var b = 0; b < flagBtns.length; b++) {
+      (function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          var lang = btn.getAttribute('data-lang');
+          if (lang) {
+            setLanguage(lang);
+          }
+        }, false);
+      })(flagBtns[b]);
+    }
+
+    // Restore saved language (default: ru)
+    var saved = 'ru';
+    try {
+      // Clear any stale value from previous sessions
+      var stored = localStorage.getItem('ots-lang');
+      if (stored === 'ru' || stored === 'en') {
+        saved = stored;
+      }
+    } catch(e) {}
+    // Always apply language on load (translates page from English HTML fallback)
+    setLanguage(saved);
+  })();
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>

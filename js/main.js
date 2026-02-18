@@ -35,6 +35,18 @@
     yearEl.textContent = new Date().getFullYear();
   }
 
+  // ===== LANGUAGE SWITCHER =====
+  // Moved to standalone inline script in index.html for isolation
+
+  // Helper: get current translation for a key
+  function getTranslation(key) {
+    const lang = document.documentElement.lang || 'en';
+    if (typeof translations !== 'undefined' && translations[key] && translations[key][lang]) {
+      return translations[key][lang];
+    }
+    return key;
+  }
+
   // ===== HEADER SCROLL =====
   let lastScroll = 0;
 
@@ -198,12 +210,12 @@
       const message = $('#message').value.trim();
 
       if (!name || !email || !subject || !message) {
-        showFormStatus('Please fill in all fields.', 'error');
+        showFormStatus(getTranslation('form.error.fields'), 'error');
         return;
       }
 
       if (!isValidEmail(email)) {
-        showFormStatus('Please enter a valid email address.', 'error');
+        showFormStatus(getTranslation('form.error.email'), 'error');
         return;
       }
 
@@ -214,15 +226,15 @@
         <svg class="btn__spinner" viewBox="0 0 24 24" fill="none" style="width:18px;height:18px;animation:spin 1s linear infinite">
           <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="31.4" stroke-linecap="round"/>
         </svg>
-        Sending...
+        ${getTranslation('form.sending')}
       `;
 
       setTimeout(() => {
-        showFormStatus('Thank you! Your message has been sent. We\'ll get back to you soon.', 'success');
+        showFormStatus(getTranslation('form.success'), 'success');
         contactForm.reset();
         submitBtn.disabled = false;
         submitBtn.innerHTML = `
-          Send Message
+          ${getTranslation('form.submit')}
           <svg class="btn__icon" viewBox="0 0 20 20" fill="none"><path d="M2 10l7-7m0 0v5m0-5H4m14 12l-7 7m0 0v-5m0 5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         `;
       }, 1500);

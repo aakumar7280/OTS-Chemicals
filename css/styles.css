@@ -412,6 +412,51 @@ ul, ol {
   transform: translateY(-1px);
 }
 
+/* Language Toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: var(--sp-md);
+  position: relative;
+  z-index: 10;
+}
+
+.lang-toggle__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 24px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.45;
+  transition: all var(--dur-base) var(--ease-out);
+  overflow: hidden;
+  position: relative;
+}
+
+.lang-toggle__btn:hover {
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.lang-toggle__btn--active {
+  opacity: 1;
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 8px rgba(0,102,255,.2);
+}
+
+.lang-toggle__flag {
+  width: 28px;
+  height: 20px;
+  display: block;
+  border-radius: 2px;
+}
+
 /* Burger */
 .header__burger {
   display: none;
@@ -1342,6 +1387,11 @@ ul, ol {
 
   .header__burger.active span {
     background: #fff !important;
+  }
+
+  .lang-toggle {
+    margin-left: auto;
+    margin-right: var(--sp-sm);
   }
 
   .hero__stats {
