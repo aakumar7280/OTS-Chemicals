@@ -761,8 +761,10 @@ ul, ol {
 /* ===== LEADERSHIP ===== */
 .leadership__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--sp-xl);
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .leadership__card {
