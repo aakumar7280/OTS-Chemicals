@@ -178,7 +178,15 @@ const translations = {
   "contact.email.label":    { ru: "Эл. почта",          en: "Email" },
   "contact.address":        { ru: "Адрес",               en: "Address" },
   "contact.address.legal":  { ru: "Юридический адрес:",  en: "Legal Address:" },
+  "contact.address.legal.value": {
+    ru: "Россия, 109316, Город Москва, вн.тер.г. муниципальный округ Нижегородский, ул Талалихина, д. 41, стр. 9",
+    en: "Russia, 109316, Moscow, intra-urban territorial municipal district Nizhegorodskiy, ul. Talalikhina, d. 41, str. 9"
+  },
   "contact.address.corr":   { ru: "Корреспондентский адрес:", en: "Correspondence Address:" },
+  "contact.address.corr.value": {
+    ru: "Россия, 107023, Москва, Суворовская ул., 19/9, офис 94",
+    en: "Russia, 107023, Moscow, Suvorovskaya str., 19/9, office 94"
+  },
   "form.name":              { ru: "Имя",                 en: "Full Name" },
   "form.name.placeholder":  { ru: "Ваше имя",           en: "Your name" },
   "form.email":             { ru: "Электронная почта",   en: "Email Address" },
